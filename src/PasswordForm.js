@@ -8,10 +8,11 @@ class PasswordFormInput extends Component {
 
 
     render() {
-        const classtoPut = `${this.type} form`
+        const classtoPut = `${this.props.type} form`
+        const placeHolder = `Enter the ${this.props.type}`
         return (<div className={classtoPut}>
             <img className='form-icons' src={this.props.imgUrl} alt='webiste' />
-            <input onChange={(event) => this.props.handleSearchChangeInput(event, this.props.type)}></input>
+            <input onChange={(event) => this.props.handleSearchChangeInput(event, this.props.type)} placeholder={placeHolder}></input>
         </div>)
     }
 
